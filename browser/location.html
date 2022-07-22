@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="href"></p>
+<p id="hostname"></p>
+<p id="pathname"></p>
+<p id="protocol"></p>
+
+<script>
+    document.getElementById("href").innerHTML ="The <b>full URL</b of this page is:<br>" + window.location.href;
+    document.getElementById("hostname").innerHTML = "Page <b>hostname</b> is " + window.location.hostname;
+    document.getElementById("pathname").innerHTML = "Page <b>path</b> is " + window.location.pathname;
+    document.getElementById("protocol").innerHTML = "Page <b>protocol</b> is " + window.location.protocol;
+</script>
+
+</body>
+</html>
