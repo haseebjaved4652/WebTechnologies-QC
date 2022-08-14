@@ -17,13 +17,20 @@ if($type=="view"){
         // output data of each row
 
         while($row = $result->fetch_assoc()) {
+
             $temp=array();
             array_push($temp,$row["source_id"]);
+
             array_push($temp,$row["source_name"]);
+
             array_push($temp,$row["source_url"]);
+
             array_push($temp,$row["source_begin"]);
+
             array_push($temp,$row["source_end"]);
+
             array_push($temp,$row["parsed_dtm"]);
+
             array_push($status,$temp);
 
         }
@@ -50,7 +57,7 @@ else{
     }
 
     $status=array();
-    $sql="SELECT word,freq FROM `occurrence` where source_id=$id ";
+    $sql="SELECT word, freq FROM `occurrence` where source_id=$id ";
     $result = $conn->query($sql);
     $source_id=0;
     if ($result->num_rows > 0) {
